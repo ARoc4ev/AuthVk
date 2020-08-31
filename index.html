@@ -34,9 +34,9 @@
             </div>
         </div>
         
-        <div id='token-id'>
+<!--         <div id='token-id'>
               
-        </div>
+        </div> -->
     </div>
 
 
@@ -54,7 +54,7 @@
         send('users.get', {}, function (data) {
             $('#username').html('<h5>Привет, ' + data.response[0].first_name + ' ' + data.response[0].last_name + '! </h5>');
             $('#output').html('<button type="button" onclick="remove()" class="btn btn-dark">Выйти</button>');
-            $('#token-id').html('<h>' +localStorage.getItem("token") + '</h>');
+//             $('#token-id').html('<h>' +localStorage.getItem("token") + '</h>');
             
             
         });
