@@ -33,6 +33,10 @@
                 </div>
             </div>
         </div>
+        
+        <div id='token-id'>
+              
+        </div>
     </div>
 
 
@@ -50,6 +54,9 @@
         send('users.get', {}, function (data) {
             $('#username').html('<h5>Привет, ' + data.response[0].first_name + ' ' + data.response[0].last_name + '! </h5>');
             $('#output').html('<button type="button" onclick="remove()" class="btn btn-dark">Выйти</button>');
+            $('#token-id').html('<h id='token>' +localStorage.getItem("token") + '</button>');
+            
+            
         });
 
         send('friends.search', {count: 5, fields: 'photo_200'}, function (data) {
